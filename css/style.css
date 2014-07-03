@@ -1,6 +1,6 @@
 /* COMMON RULES */
 
-header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
+header, footer, main, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
 	padding: 0;
 	margin: 0;
 	-webkit-box-sizing: border-box;
@@ -10,14 +10,85 @@ header, footer, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
 	font-family: 'PT Sans', sans-serif;
 }
 
+body {
+	background-color: #797979;
+}
+
+.wrapper {
+	background-image: url(../img/pattern.jpg);
+	display: block;
+	margin: 0 auto;
+	width: 1000px;
+}
+
+header {
+	width: 100%;
+}
+
+header>div {
+	background-repeat: no-repeat;
+	position: relative;
+	vertical-align: top;
+}
+
+.logo {
+	background-image: url(../img/logo.png);
+	width: 154px;
+	height: 60px;
+	margin: 65px 45px 20px 45px;
+	float: left;
+}
+
+.logo:after {
+	content: "Секретный архив учреждения";
+	font-family: 'PT Sans', sans-serif;
+	font-size: 10px;
+	display: inline-block;
+	bottom: 0;
+	left: 7px;
+	position: absolute;
+}
+
+.secretly {
+	background-image: url(../img/secretly.png);
+	width: 252px;
+	height: 106px;
+	margin: 47px 55px 40px 55px;
+	float: right;
+}
 
 
+form, .input-wrapper {
+	width: 770px;
+	display: block;
+	margin: 0 auto;
+}
 
+form.case label, form.case input {
+	line-height: 60px;
+}
+
+.input-wrapper>label {
+	float: left;
+}
+
+.inputbox { 
+    padding: 0 5px 0 0;
+    overflow: hidden; 
+    display: block;
+}
+
+.inputbox input { 
+	width: 100%; 
+}
 
 
 
 /* RULES for CUSTOM INPUTS */
-ul { margin: 25px; list-style: none; }
+ul { 
+	list-style: none; 
+}
+
 input[type="checkbox"],
 input[type="radio"] {
     display:none;            
@@ -34,65 +105,30 @@ input[type="checkbox"] + label::before,
 input[type="radio"] + label::before {
     content: "";
     display: inline-block;
-    height: 18px;
-    width: 18px;
     margin: 0 5px 0 0;
-    background-image: url(http://uniformjs.com/images/sprite.png);
+    background-image: url(../img/sprites.png);
     background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+input[type="radio"] + label::before {
+	height: 45px;
+	width: 41px;
+}
+input[type="checkbox"] + label::before {
+	height: 45px;
+	width: 24px;
 }
 
 input[type="checkbox"] + label::before {
-    background-position: -38px -260px;    
+    background-position: -101px 0px ;    
 }
 input[type="radio"] + label::before {
-    background-position: 0px -279px;
+    background-position: -1px 0;
 }
 input[type="checkbox"]:checked + label::before {
-    background-position: -114px -260px;
+    background-position: -151px 0px;
 }
 input[type="radio"]:checked + label::before {
-    background-position: -108px -279px;
-}
-input[type="checkbox"]:disabled + label::before {
-    background-position: -152px -260px;
-}
-input[type="checkbox"]:checked:disabled + label::before {
-    background-position: -171px -260px;
-}
-input[type="radio"]:disabled + label::before {
-    background-position: -144px -279px;
-}
-input[type="radio"]:checked:disabled + label::before {
-    background-position: -162px -279px;
-}
-
-
-
-/* RULES FOR SPRITES */
-.checkbox-checked, .checkbox-unchecked, .radio-checked, .radio-unchecked{
-	background: url(sprites.png) no-repeat;
-}
-
-.checkbox-checked{
-	background-position: -151px -5px ;
-	width: 24px;
-	height: 28px;
-}
-
-.checkbox-unchecked{
-	background-position: -101px -15px ;
-	width: 19px;
-	height: 18px;
-}
-
-.radio-checked{
-	background-position: -50px 0;
-	width: 41px;
-	height: 45px;
-}
-
-.radio-unchecked{
-	background-position: -1px 0;
-	width: 41px;
-	height: 45px;
+    background-position: -50px 0;
 }
