@@ -3,15 +3,23 @@
 header, footer, main, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
 	padding: 0;
 	margin: 0;
+	color: #000;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	display: inline-block;
 	font-family: 'PT Sans', sans-serif;
+	font-size: 22.43px;
+	font-weight: bold;
 }
 
 body {
 	background-color: #797979;
+}
+
+
+input {
+	outline: none;
 }
 
 .wrapper {
@@ -21,11 +29,14 @@ body {
 	width: 1000px;
 }
 
+
+
+/* HEADER */
 header {
 	width: 100%;
 }
 
-header>div {
+header>div, header>a {
 	background-repeat: no-repeat;
 	position: relative;
 	vertical-align: top;
@@ -58,14 +69,26 @@ header>div {
 }
 
 
-form, .input-wrapper {
+/* MAIN CONTENT */
+main {
 	width: 770px;
 	display: block;
 	margin: 0 auto;
 }
 
-form.case label, form.case input {
-	line-height: 60px;
+main>.title {
+	display: block;
+	margin: 0 auto;
+	background-image: url(../img/title.png);
+	width: 221px;
+	height: 118px;
+	margin-bottom: 55px;
+}
+
+form, .input-wrapper {
+	width: 100%;
+	vertical-align: bottom;
+	margin-bottom: 15px;
 }
 
 .input-wrapper>label {
@@ -80,8 +103,24 @@ form.case label, form.case input {
 
 .inputbox input { 
 	width: 100%; 
+	font-family: "Courier New";
+	font-size: 30px;
+	padding: 0 15px;
+	background-color: rgba(0, 0, 0, 0.0);
+	border: none;
+	position: relative;
+	-webkit-border-image: url(../img/underline.png) 0 0 9 0;
+	-o-border-image: url(../img/underline.png) 0 0 9 0;
+	border-image: url(../img/underline.png) 0 0 9 0;
+	border-bottom-width: 9px;
+	vertical-align: top;
 }
 
+.case .input-wrapper label {
+	font-weight: bold;
+	margin-right: 15px;
+	padding-top: 18px;
+}
 
 
 /* RULES for CUSTOM INPUTS */
@@ -89,20 +128,21 @@ ul {
 	list-style: none; 
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-    display:none;            
+.case input[type="checkbox"],
+.case input[type="radio"] {
+    display:none;     
+    background: rgba(0, 0, 0, 0);       
 }
 
-input[type="checkbox"] + label, 
-input[type="radio"] + label {
+.case input[type="checkbox"] + label, 
+.case input[type="radio"] + label {
   font: 18px bold;
   color: #444;
   cursor: pointer;
 }
 
-input[type="checkbox"] + label::before,
-input[type="radio"] + label::before {
+.case input[type="checkbox"] + label::before,
+.case input[type="radio"] + label::before {
     content: "";
     display: inline-block;
     margin: 0 5px 0 0;
@@ -111,24 +151,24 @@ input[type="radio"] + label::before {
     background-position: bottom left;
 }
 
-input[type="radio"] + label::before {
+.case input[type="radio"] + label::before {
 	height: 45px;
 	width: 41px;
 }
-input[type="checkbox"] + label::before {
+.case input[type="checkbox"] + label::before {
 	height: 45px;
 	width: 24px;
 }
 
-input[type="checkbox"] + label::before {
+.case input[type="checkbox"] + label::before {
     background-position: -101px 0px ;    
 }
-input[type="radio"] + label::before {
+.case input[type="radio"] + label::before {
     background-position: -1px 0;
 }
-input[type="checkbox"]:checked + label::before {
+.case input[type="checkbox"]:checked + label::before {
     background-position: -151px 0px;
 }
-input[type="radio"]:checked + label::before {
+.case input[type="radio"]:checked + label::before {
     background-position: -50px 0;
 }
