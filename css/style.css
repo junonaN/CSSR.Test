@@ -1,9 +1,9 @@
-/* COMMON RULES */
 
+/* COMMON RULES */
 header, footer, main, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input {
 	padding: 0;
 	margin: 0;
-	color: #000;
+	color: #2f1b15;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -13,14 +13,12 @@ header, footer, main, div, img, a, h1, h2, h3, h4, h5, p, section, ul, li, input
 	font-weight: bold;
 }
 
-body {
-	background-color: #797979;
-}
+body 	{		background-color: #797979; }
 
+input 	{		outline: none;		}
 
-input {
-	outline: none;
-}
+ul 		{ 		list-style: none;	}
+
 
 .wrapper {
 	background-image: url(../img/pattern.jpg);
@@ -28,13 +26,11 @@ input {
 	margin: 0 auto;
 	width: 1000px;
 }
-
+ 
 
 
 /* HEADER */
-header {
-	width: 100%;
-}
+header {	width: 100%;	}
 
 header>div, header>a {
 	background-repeat: no-repeat;
@@ -85,90 +81,240 @@ main>.title {
 	margin-bottom: 55px;
 }
 
-form, .input-wrapper {
-	width: 100%;
-	vertical-align: bottom;
-	margin-bottom: 15px;
-}
+	/* FORM */
 
-.input-wrapper>label {
-	float: left;
-}
+		/* TEXT INPUTS */
+		form, .input-wrapper {
+			width: 100%;
+			vertical-align: bottom;
+			margin-bottom: 15px;
+		}
 
-.inputbox { 
-    padding: 0 5px 0 0;
-    overflow: hidden; 
-    display: block;
-}
+		.input-wrapper>label {
+			float: left;
+		}
 
-.inputbox input { 
-	width: 100%; 
-	font-family: "Courier New";
-	font-size: 30px;
-	padding: 0 15px;
-	background-color: rgba(0, 0, 0, 0.0);
-	border: none;
-	position: relative;
-	-webkit-border-image: url(../img/underline.png) 0 0 9 0;
-	-o-border-image: url(../img/underline.png) 0 0 9 0;
-	border-image: url(../img/underline.png) 0 0 9 0;
-	border-bottom-width: 9px;
-	vertical-align: top;
-}
+		.inputbox { 
+		    padding: 0 5px 0 0;
+		    overflow: hidden; 
+		    display: block;
+		}
 
-.case .input-wrapper label {
-	font-weight: bold;
-	margin-right: 15px;
-	padding-top: 18px;
-}
+		.inputbox input { 
+			width: 100%; 
+			font-family: "Courier New";
+			font-size: 30px;
+			font-weight: normal;
+			padding: 0 15px;
+			background-color: rgba(0, 0, 0, 0.0);
+			border: none;
+			position: relative;
+			-webkit-border-image: url(../img/underline.png) 0 0 9 0;
+			-o-border-image: url(../img/underline.png) 0 0 9 0;
+			border-image: url(../img/underline.png) 0 0 9 0;
+			border-bottom-width: 9px;
+			vertical-align: top;
+		}
+
+		.case .input-wrapper label {
+			font-weight: bold;
+			margin-right: 15px;
+			padding-top: 18px;
+		}
 
 
-/* RULES for CUSTOM INPUTS */
-ul { 
-	list-style: none; 
-}
+		/* RULES for CUSTOM INPUTS */
+		.case input[type="checkbox"],
+		.case input[type="radio"] {
+		    display:none;     
+		    background: rgba(0, 0, 0, 0);       
+		}
 
-.case input[type="checkbox"],
-.case input[type="radio"] {
-    display:none;     
-    background: rgba(0, 0, 0, 0);       
-}
+		.case input[type="checkbox"] + label, 
+		.case input[type="radio"] + label {
+		  font: 18px bold;
+		  cursor: pointer;
+		  position: relative;
+		  margin-left: 30px;
+		  font-weight: bold;
+		  font-family: "PT Sans", sans-serif;
+		}
 
-.case input[type="checkbox"] + label, 
-.case input[type="radio"] + label {
-  font: 18px bold;
-  color: #444;
-  cursor: pointer;
-}
+		.case input[type="checkbox"] + label {
+			font-size: 21px;
+			color: #000;
+			padding-left: 10px;
+		}
 
-.case input[type="checkbox"] + label::before,
-.case input[type="radio"] + label::before {
-    content: "";
-    display: inline-block;
-    margin: 0 5px 0 0;
-    background-image: url(../img/sprites.png);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-}
+		.case input[type="radio"] + label {
+			color: #2f1b15;
+			font-size: 22px;
+		}
 
-.case input[type="radio"] + label::before {
-	height: 45px;
-	width: 41px;
-}
-.case input[type="checkbox"] + label::before {
-	height: 45px;
-	width: 24px;
-}
+		.case input[type="checkbox"] + label::before,
+		.case input[type="radio"] + label::before {
+		    content: "";
+		    display: inline-block;
+		    margin: 0 5px 0 0;
+		    background-image: url(../img/sprites.png);
+		    background-repeat: no-repeat;
+		    background-position: bottom left;
+		    position: absolute;
+		}
 
-.case input[type="checkbox"] + label::before {
-    background-position: -101px 0px ;    
-}
-.case input[type="radio"] + label::before {
-    background-position: -1px 0;
-}
-.case input[type="checkbox"]:checked + label::before {
-    background-position: -151px 0px;
-}
-.case input[type="radio"]:checked + label::before {
-    background-position: -50px 0;
-}
+		.case input[type="radio"] + label::before {
+			width: 35px;
+			height: 30px;
+			top: -3px;
+		    left: -42px;
+		}
+		.case input[type="checkbox"] + label::before {
+			width: 24px;
+			height: 28px;
+			top: -5px;
+		    left: -30px;
+		}
+
+		.case input[type="checkbox"] + label::before {
+		    background-position: -101px 0px ;    
+		}
+		.case input[type="radio"] + label::before {
+		    background-position: -1px 0;
+		}
+		.case input[type="checkbox"]:checked + label::before {
+		    background-position: -151px 0px;
+		}
+		.case input[type="radio"]:checked + label::before {
+		    background-position: -50px 0;
+		}
+
+	/* GRADUATE BLOCK */
+	.graduate-block {
+		margin: 20px 0 35px 0;
+
+	}
+
+	.graduate-block .title {
+		margin-right: 20px;
+		line-height: 45px;
+	}
+
+	.graduate-block .title a {
+		color: #014f98;
+	}
+
+	.graduate-block .label {
+		line-height: 45px;
+	}
+
+	/* PRACTICAL SKILLS */
+	.skills {
+		width: 100%;
+	}
+
+	.skills>p {
+		font-size: 14px;
+		color: #3d3d3d;
+		font-weight: normal;
+		position: relative;
+		line-height: 24px;
+		margin-left: 15px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	.skills>p:before  {
+		content: '*';
+		position: absolute;
+		font-size: 36px;
+		top: 9px;
+		left: -18px;
+	}
+
+	.skills .column {
+		width: 33%;
+		display: block;
+		float: left;
+	}
+
+	.skills .column li {
+		width: 100%;
+		display: block;
+		margin-bottom: 5px;
+	}
+
+
+	/* JAVASCRIPT LEVEL */
+	.js-skills {
+		margin-top: 80px;
+
+	}
+
+	.js-skills .title {
+		margin-bottom: 25px;
+	}
+
+	.js-skills .slider {
+		padding-top: 40px;
+		position: relative;
+	}
+
+	.js-skills .slider:before {
+		position: absolute;
+		content: '';
+		top: 5px;
+		left: 0;
+		background-image: url(../img/underline.png);
+		background-repeat: repeat-x;
+		height: 9px;
+		width: 770px;
+		display: block;
+	}
+
+	.js-skills .slider div {
+		font-size: 13px;
+		width: 200px;
+		margin-right: 24px;
+		color: #743;
+		vertical-align: top;
+		position: relative;
+	}
+
+	.js-skills .slider div:first-child {
+		width: 110px;
+	}
+	
+	.js-skills .slider div:last-child {
+		width: 170px;
+		margin-right: 0;
+		text-align: right;
+	}
+
+	.js-skills .slider div:before {
+		position: absolute;
+		content: '';
+		top: -30px;
+		width: 3px;
+		height: 10px;
+		background-color: #5f4435;
+	}
+
+	.js-skills .slider div:not(:last-child):before {
+		left: 0;
+	}
+
+	.js-skills .slider div:first-child:before {
+		height: 25px;
+	}
+
+	.js-skills .slider div:last-child:before {
+		height: 25px;
+		right: 0;
+	}
+
+	/* DATE BLOCK */
+
+	.date-block {
+		margin-top: 50px;
+		margin-bottom: 75px;
+	}
