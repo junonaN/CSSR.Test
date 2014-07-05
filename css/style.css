@@ -130,8 +130,8 @@ main>.title {
 		    background: rgba(0, 0, 0, 0);       
 		}
 
-		.case input[type="checkbox"] + label, 
-		.case input[type="radio"] + label {
+		.case .skills input[type="checkbox"] + label, 
+		.case .graduate-block input[type="radio"] + label {
 		  font: 18px bold;
 		  cursor: pointer;
 		  position: relative;
@@ -140,19 +140,20 @@ main>.title {
 		  font-family: "PT Sans", sans-serif;
 		}
 
-		.case input[type="checkbox"] + label {
+		.case .skills input[type="checkbox"] + label {
 			font-size: 21px;
 			color: #000;
 			padding-left: 10px;
 		}
 
-		.case input[type="radio"] + label {
+		.case .graduate-block input[type="radio"] + label {
 			color: #2f1b15;
 			font-size: 22px;
+			margin-right: 15px;
 		}
 
-		.case input[type="checkbox"] + label::before,
-		.case input[type="radio"] + label::before {
+		.case .skills input[type="checkbox"] + label::before,
+		.case .graduate-block input[type="radio"] + label::before {
 		    content: "";
 		    display: inline-block;
 		    margin: 0 5px 0 0;
@@ -162,29 +163,29 @@ main>.title {
 		    position: absolute;
 		}
 
-		.case input[type="radio"] + label::before {
+		.case .graduate-block input[type="radio"] + label::before {
 			width: 35px;
 			height: 30px;
 			top: -3px;
 		    left: -42px;
 		}
-		.case input[type="checkbox"] + label::before {
+		.case .skills input[type="checkbox"] + label::before {
 			width: 24px;
 			height: 28px;
 			top: -5px;
 		    left: -30px;
 		}
 
-		.case input[type="checkbox"] + label::before {
+		.case .skills input[type="checkbox"] + label::before {
 		    background-position: -101px 0px ;    
 		}
-		.case input[type="radio"] + label::before {
+		.case .graduate-block input[type="radio"] + label::before {
 		    background-position: -1px 0;
 		}
-		.case input[type="checkbox"]:checked + label::before {
+		.case .skills input[type="checkbox"]:checked + label::before {
 		    background-position: -151px 0px;
 		}
-		.case input[type="radio"]:checked + label::before {
+		.case .graduate-block input[type="radio"]:checked + label::before {
 		    background-position: -50px 0;
 		}
 
@@ -311,6 +312,21 @@ main>.title {
 		height: 25px;
 		right: 0;
 	}
+
+		.case .js-skills input[type="radio"]:checked + label::before {
+		    content: "";
+		    display: inline-block;
+		    margin: 0 5px 0 0;
+		    background-image: url(../img/slider-triangle.png);
+		    background-repeat: no-repeat;
+		    background-position: bottom left;
+		    position: absolute;
+			width: 17px;
+			height: 14px;
+			top: -48px;
+		    left: -7px;
+		}
+
 
 	/* DATE BLOCK */
 

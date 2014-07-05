@@ -30,43 +30,49 @@
 				<div class="title"></div>
 
 				<form action="" class="case">
-					<div class="input-wrapper">
-						<label for="name">Полное ФИО</label>
-						<div class="inputbox">
-							<input type="text" id="name" value="Вьюшкова Юлия Андреевна">
-						</div>	
-					</div>
-					<div class="input-wrapper">
-						<label for="year">Год рождения</label>
-						<div class="inputbox">
-							<input type="text" id="year" value="1987">	
+					<div class="profile">
+						<div class="input-wrapper">
+							<label for="name">Полное ФИО</label>
+							<div class="inputbox">
+								<input type="text" id="name" value="Вьюшкова Юлия Андреевна">
+							</div>	
+						</div>
+						<div class="input-wrapper">
+							<label for="year">Год рождения</label>
+							<div class="inputbox">
+								<input type="text" id="year" value="1987">	
+							</div>
+						</div>
+						<div class="input-wrapper">
+							<label for="city">Место жительства</label>
+							<div class="inputbox">
+								<input type="text" id="city" value="г. Санкт-Петербург, Россия">	
+							</div>
+						</div>
+						<div class="input-wrapper">
+							<label for="skype">Скайп</label>
+							<div class="inputbox">
+								<input type="text" id="skype" value="junonanova">	
+							</div>
+						</div>
+						<div class="input-wrapper">
+							<label for="mail">Почта</label>
+							<div class="inputbox">
+								<input type="text" id="mail" value="j.vyushkova@gmail.com">	
+							</div>
 						</div>
 					</div>
-					<div class="input-wrapper">
-						<label for="city">Место жительства</label>
-						<div class="inputbox">
-							<input type="text" id="city" value="г. Санкт-Петербург, Россия">	
-						</div>
-					</div>
-					<div class="input-wrapper">
-						<label for="skype">Скайп</label>
-						<div class="inputbox">
-							<input type="text" id="skype" value="junonanova">	
-						</div>
-					</div>
-					<div class="input-wrapper">
-						<label for="mail">Почта</label>
-						<div class="inputbox">
-							<input type="text" id="mail" value="j.vyushkova@gmail.com">	
-						</div>
-					</div>
+					
+
 					<div class="graduate-block">
 						<div class="title">Выпускник <a href="http://htmlacademy.ru/">htmlacademy.ru</a></div>
-						<input type="radio" id="graduate-yes" name="graduate">
+						<input type="radio" id="graduate-yes" name="graduate" hidden checked>
 						<label for="graduate-yes">Да</label>
-						<input type="radio" id="graduate-no" name="graduate">
+						<input type="radio" id="graduate-no" name="graduate" hidden>
 						<label for="graduate-no">Нет</label>
 					</div>
+
+
 					<div class="skills">
 						<div class="title">Практические навыки</div>
 						<p>Отметьте только те технологии и типы задач, с которыми вы хорошо знакомы. Отсутсвие опыта отнюдь не означает, что у вас меньше шансов стать нашим сотрудником. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.</p>
@@ -155,15 +161,30 @@
 							</ul>
 						</div>
 					</div>
+
+
 					<div class="js-skills">
 						<div class="title">Уровень владения JavaScript</div>
 						<div class="slider">
-							<div>Не владею</div>
-							<div>Использую готовые решения</div>
-							<div>Использую готовые решения и умею их переделывать</div>
-							<div>Пишу сложные скрипты</div>
+							<div>
+								<input type="radio" id="dont-use" name="js-skills" hidden checked>
+								<label for="dont-use">Не владею</label>
+							</div>
+							<div>
+								<input type="radio" id="dont-use" name="js-skills" hidden>
+								<label for="dont-use">Использую готовые решения</label>
+							</div>
+							<div>
+								<input type="radio" id="dont-use" name="js-skills" hidden>
+								<label for="dont-use">Использую готовые решения и умею их переделывать</label>
+							</div>
+							<div>
+								<input type="radio" id="dont-use" name="js-skills" hidden>
+								<label for="dont-use">Пишу сложные скрипты</label>
 						</div>
 					</div>
+
+
 					<div class="date-block">
 						<div class="input-wrapper">
 							<label for="date">Дата заполнения</label>
@@ -172,6 +193,8 @@
 							</div>
 						</div>
 					</div>
+
+
 				</form>
 			</main>
 		</div>
