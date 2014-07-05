@@ -135,15 +135,26 @@ main>.title {
 		  font: 18px bold;
 		  cursor: pointer;
 		  position: relative;
-		  margin-left: 30px;
+		  margin-left: 40px;
 		  font-weight: bold;
 		  font-family: "PT Sans", sans-serif;
+		}
+
+		.case .skills input[type="checkbox"] + label:hover {
+			color: rgba(47, 27, 21, 0.7);
+		}
+
+		.case .skills input[type="checkbox"]:checked + label {
+			color: #0f375c;
+		}
+
+		.case .graduate-block input[type="radio"] + label:hover {
+			color: #000;
 		}
 
 		.case .skills input[type="checkbox"] + label {
 			font-size: 21px;
 			color: #000;
-			padding-left: 10px;
 		}
 
 		.case .graduate-block input[type="radio"] + label {
@@ -246,21 +257,21 @@ main>.title {
 
 
 	/* JAVASCRIPT LEVEL */
-	.js-skills {
+	.programming-skills {
 		margin-top: 80px;
 
 	}
 
-	.js-skills .title {
+	.programming-skills .title {
 		margin-bottom: 25px;
 	}
 
-	.js-skills .slider {
+	.programming-skills .slider {
 		padding-top: 40px;
 		position: relative;
 	}
 
-	.js-skills .slider:before {
+	.programming-skills .slider:before {
 		position: absolute;
 		content: '';
 		top: 5px;
@@ -272,7 +283,7 @@ main>.title {
 		display: block;
 	}
 
-	.js-skills .slider div {
+	.programming-skills .slider div {
 		font-size: 13px;
 		width: 200px;
 		margin-right: 24px;
@@ -281,17 +292,17 @@ main>.title {
 		position: relative;
 	}
 
-	.js-skills .slider div:first-child {
+	.programming-skills .slider div:first-child {
 		width: 110px;
 	}
 	
-	.js-skills .slider div:last-child {
+	.programming-skills .slider div:last-child {
 		width: 170px;
 		margin-right: 0;
 		text-align: right;
 	}
 
-	.js-skills .slider div:before {
+	.programming-skills .slider div:before {
 		position: absolute;
 		content: '';
 		top: -30px;
@@ -300,23 +311,22 @@ main>.title {
 		background-color: #5f4435;
 	}
 
-	.js-skills .slider div:not(:last-child):before {
+	.programming-skills .slider div:not(:last-child):before {
 		left: 0;
 	}
 
-	.js-skills .slider div:first-child:before {
+	.programming-skills .slider div:first-child:before {
 		height: 25px;
 	}
 
-	.js-skills .slider div:last-child:before {
+	.programming-skills .slider div:last-child:before {
 		height: 25px;
-		right: 0;
+		right: -1px;
 	}
 
-		.case .js-skills input[type="radio"]:checked + label::before {
+		.case .programming-skills input[type="radio"]:checked + label::before {
 		    content: "";
 		    display: inline-block;
-		    margin: 0 5px 0 0;
 		    background-image: url(../img/slider-triangle.png);
 		    background-repeat: no-repeat;
 		    background-position: bottom left;
@@ -324,13 +334,26 @@ main>.title {
 			width: 17px;
 			height: 14px;
 			top: -48px;
+		}
+
+		.case .programming-skills input[type="radio"][id="dont-use"]:checked + label::before,
+		.case .programming-skills input[type="radio"][id="use-ready"]:checked + label::before,
+		.case .programming-skills input[type="radio"][id="change-ready"]:checked + label::before {
 		    left: -7px;
 		}
 
+		.case .programming-skills input[type="radio"][id="create-new"]:checked + label::before {
+		    right: -8px;
+		}
+
+		.case .programming-skills input[type="radio"] + label:hover {
+			color: #000;
+			cursor: pointer;
+		}
 
 	/* DATE BLOCK */
 
-	.date-block {
+	.completion-date {
 		margin-top: 50px;
 		margin-bottom: 75px;
 	}
